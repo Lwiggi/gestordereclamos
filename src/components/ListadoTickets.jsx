@@ -1,5 +1,6 @@
 import Ticket from "./Ticket";
 
+
 function ListadoTickets({ tickets,setTicket, eliminarTicket }) {
   return (
     <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
@@ -15,7 +16,7 @@ function ListadoTickets({ tickets,setTicket, eliminarTicket }) {
             </span>
           </p>
 
-          {tickets.map((ticket) => (
+          {tickets.map.((ticket) => (
             <Ticket key={ticket.id} ticket={ticket} 
             setTicket={setTicket}
             eliminarTicket={eliminarTicket}
