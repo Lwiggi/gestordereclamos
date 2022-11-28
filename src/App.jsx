@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
-
-import Header from "./components/Header";
 import Formulario from "./components/Formulario";
 import ListadoTickets from "./components/ListadoTickets";
-import NavBar from "./components/NavBar";
+import NavBar2 from "./components/NavBar2";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+
+
 
 function App() {
   const [tickets, setTickets] = useState([]);
@@ -32,25 +35,38 @@ function App() {
   };
 
   return (
-    
-    <div className="container mx-auto mt-20">
-      <NavBar />
-      <Header />
-      <div className="mt-12 md:flex">
-        <Formulario
+    <div>
+      <NavBar2/>
+      <Router>
+        <Routes>
+          <Route exact path= '/' element ={<Home/>}/>
+          <Route path= '/generarticket' element ={<Formulario/>}/>
+          <Route path= '/listarticket' element ={<ListadoTickets/>}/>
+          <Route path= '/contacto' element ={<Contacto/>}/>
+        </Routes>
+      </Router>
+      <Footer/>
+    </div>
+  )
+    {/* <div className="container mx-auto mt-2">
+
+   
+      
+      <div className="mt-10 md:flex">
+       {/*  <Formulario
           tickets={tickets}
           setTickets={setTickets}
           ticket={ticket}
-          setTicket={setTicket}
-        />
+          setTicket={setTicket} />
         <ListadoTickets
           tickets={tickets}
           setTicket={setTicket}
-          eliminarTicket={eliminarTicket}
-        />
+          eliminarTicket={eliminarTicket} /> 
+        
       </div>
-    </div>
-  );
+      <Footer/>
+    </div> */}
+     ;
 }
 
 export default App;
