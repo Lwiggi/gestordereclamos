@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import  Error  from './Error.jsx';
 
-function Formulario({tickets,setTickets,ticket, setTicket}) {
+function Formulario({tickets,setTickets,ticket,setTicket}) {
   const [cliente, setCliente] = useState("");
   const [contacto, setContacto] = useState("");
   const [email, setEmail] = useState("");
@@ -197,7 +197,7 @@ function Formulario({tickets,setTickets,ticket, setTicket}) {
         <input
           type="submit"
           className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-all"
-          value={ticket.id ? 'Editar ticket' : 'Generar Reclamo'}
+          value={ticket.id?'Editar ticket' : 'Generar Reclamo'}
         />
       </form>
     </div>

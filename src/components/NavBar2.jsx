@@ -6,8 +6,8 @@ export default function NavBar2() {
         
         <div>
             <NavLink className='nav-link' to='/'>Home</NavLink>
-            <NavLink className='nav-link' to='/generarticket'>Nuevo Ticket</NavLink>
             <NavLink className='nav-link' to='/listarticket'>Listar Tickets</NavLink>
+            <NavLink className='nav-link' to='/nvotkt'>Nuevo Ticket</NavLink>
             <NavLink className='nav-link' to='/contacto'>Contacto</NavLink>
         </div>
     

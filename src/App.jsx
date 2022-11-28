@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import Formulario from "./components/Formulario";
 import ListadoTickets from "./components/ListadoTickets";
-import NavBar2 from "./components/NavBar2";
+import NavBar from "./components/NavBar";
 import { Route, Routes} from "react-router-dom";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
+import Contacto from "./components/Contacto";
 
 
 
@@ -34,39 +35,43 @@ function App() {
     setTickets(ticketsActualizados);
   };
 
-  return (
-    <div>
+  return    (
+  
+  <div className="container mx-auto mt-2">
+    <NavBar/>
+            <div className="mt-10 md:flex">
+            <Routes>
+                <Route exact path= '/' element ={<Home/>}/>
+                <Route path= '/nvotkt' element ={<Formulario
+                      tickets={tickets}
+                      setTickets={setTickets}
+                      ticket={ticket}
+                      setTicket={setTicket} />}/>
+                <Route path= '/listarticket' element ={<ListadoTickets
+                      tickets={tickets}
+                      setTicket={setTicket}
+                      eliminarTicket={eliminarTicket} />}/>
+                <Route path= '/contacto' element ={<Contacto/>}/>
+             </Routes> 
+            </div>
+    <Footer/>
+   </div> 
+   )
+   {/*  <div>
       <NavBar2/>
       
         <Routes>
           <Route exact path= '/' element ={<Home/>}/>
-          <Route path= '/generarticket' element ={<Formulario/>}/>
           <Route path= '/listarticket' element ={<ListadoTickets/>}/>
-          <Route path= '/contacto' element ={<Contacto/>}/>
+          <Route path= '/nvotkt' element ={<Formulario/>}/>
+          {/* <Route path= '/contacto' element ={<Contacto/>}/> 
         </Routes>
       
       <Footer/>
-    </div>
-  )
-    {/* <div className="container mx-auto mt-2">
+  </div> */}
+ 
 
-   
-      
-      <div className="mt-10 md:flex">
-       {/*  <Formulario
-          tickets={tickets}
-          setTickets={setTickets}
-          ticket={ticket}
-          setTicket={setTicket} />
-        <ListadoTickets
-          tickets={tickets}
-          setTicket={setTicket}
-          eliminarTicket={eliminarTicket} /> 
-        
-      </div>
-      <Footer/>
-    </div> */}
-     ;
+    
 }
 
 export default App;
