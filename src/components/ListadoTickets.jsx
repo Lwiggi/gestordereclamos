@@ -3,7 +3,7 @@ import Ticket from "./Ticket";
 
 function ListadoTickets({ tickets,setTicket, eliminarTicket }) {
   return (
-    <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
+    <div className="sm:w-full lg:w-full md:h-screen overflow-y-scroll">
       {tickets && tickets.length ? (
         <>
           <h2 className="font-black text-2xl text-center">Listado Tickets</h2>
@@ -19,9 +19,11 @@ function ListadoTickets({ tickets,setTicket, eliminarTicket }) {
           {tickets.map((ticket) => (
             <Ticket key={ticket.id} ticket={ticket} 
             setTicket={setTicket}
-            eliminarTicket={eliminarTicket}
+            /* eliminarTicket={eliminarTicket} */
             />
+
           ))}
+          
         </>
       ) : (
         <>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import  Error  from './Error.jsx';
 
 function Formulario({tickets,setTickets,ticket,setTicket}) {
@@ -19,7 +20,7 @@ function Formulario({tickets,setTickets,ticket,setTicket}) {
       setEmail(ticket.email)
       setFalla(ticket.falla)
       setFecha(ticket.fecha)
-      setEstado(ticket.estado)
+      setEstado(ticket.estado="Cerrado")
      }
    
      
@@ -101,8 +102,8 @@ function Formulario({tickets,setTickets,ticket,setTicket}) {
         <span className="text-indigo-600 font-bold ">Reclamo</span>
       </p> */}
 
-      <form
-        onSubmit={handleSubmit}
+      <form 
+        onSubmit={handleSubmit} 
         className="bg-white shadow-md rounded-lg py-10 px-5 mx-5 mb-10"
       >
         {error &&  <Error><p>Todos los campos son obligatorios</p></Error> }
@@ -197,7 +198,7 @@ function Formulario({tickets,setTickets,ticket,setTicket}) {
         <input
           type="submit"
           className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-all"
-          value={ticket.id?'Editar ticket' : 'Generar Reclamo'}
+          value={ticket.id?'Cerrar reclamo' : 'Generar Reclamo'}
         />
       </form>
     </div>
