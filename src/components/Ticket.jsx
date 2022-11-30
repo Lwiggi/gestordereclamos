@@ -1,14 +1,11 @@
 
-import { useNavigate } from 'react-router-dom'
+
 
 const Ticket = ({ticket,setTicket}) => {
 
   const {cliente,contacto,email,fecha,falla,estado,id} = ticket
   
-  const navigate = useNavigate();
-  
-  navigate('/listarticket');
-
+ 
 
  /*  const handleEliminar = () => {
      const respuesta = confirm('Deseas eliminar este ticket')
