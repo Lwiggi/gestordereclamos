@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import  Error  from './Error.jsx';
 
 function Formulario({tickets,setTickets,ticket,setTicket}) {
