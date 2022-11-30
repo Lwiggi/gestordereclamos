@@ -43,9 +43,7 @@ function Formulario({tickets,setTickets,ticket,setTicket}) {
 
   const handleSubmit = (e) => {
     
-    const navigate = useNavigate();
-    
-    navigate('/listarticket');
+
     e.preventDefault();
 
     // Validacion del formulario
