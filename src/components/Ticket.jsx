@@ -62,7 +62,6 @@ const Ticket = ({ticket,setTicket}) => {
         type="button"
         className="py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-lg"
         onClick={()=> setTicket(ticket)}
-        /* https://es.stackoverflow.com/questions/3685/realizar-2-funciones-distintas-en-un-evento-onclick-de-javascript */
         >Cerrar Reclamo</button>}
 
        {/*  <button 
