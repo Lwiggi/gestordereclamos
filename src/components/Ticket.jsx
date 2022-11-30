@@ -7,7 +7,7 @@ const Ticket = ({ticket,setTicket}) => {
   
   const navigate = useNavigate();
   
-  navigate('/nvotkt');
+  navigate('/listarticket');
 
 
  /*  const handleEliminar = () => {
