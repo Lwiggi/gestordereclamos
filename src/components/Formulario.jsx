@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import  Error  from './Error.jsx';
 
 function Formulario({tickets,setTickets,ticket,setTicket}) {
@@ -42,6 +42,10 @@ function Formulario({tickets,setTickets,ticket,setTicket}) {
   }
 
   const handleSubmit = (e) => {
+    
+    const navigate = useNavigate();
+    
+    navigate('/listarticket');
     e.preventDefault();
 
     // Validacion del formulario
