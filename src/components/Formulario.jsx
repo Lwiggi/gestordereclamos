@@ -46,6 +46,8 @@ function Formulario({tickets,setTickets,ticket,setTicket}) {
   }
 
   const handleSubmit = (e) => {
+    
+
     e.preventDefault();
 
     // Validacion del formulario
