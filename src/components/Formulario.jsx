@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import  Error  from './Error.jsx';
+import { useNavigate } from "react-router-dom";
 
 function Formulario({tickets,setTickets,ticket,setTicket}) {
   const [cliente, setCliente] = useState("");
@@ -11,6 +11,10 @@ function Formulario({tickets,setTickets,ticket,setTicket}) {
   const [estado, setEstado] = useState("Abierto");
 
   const [error, setError] = useState(false);
+
+  const navigate = useNavigate();
+
+  
 
    useEffect(() => {
      if (Object.keys(ticket).length > 0) {
@@ -45,6 +49,9 @@ function Formulario({tickets,setTickets,ticket,setTicket}) {
     e.preventDefault();
 
     // Validacion del formulario
+
+    navigate("/listarticket")
+    
 
     if ([cliente, contacto, email, falla].includes("")) {
       console.log("Hay Al Menos un campo vacio");
