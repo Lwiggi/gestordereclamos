@@ -36,12 +36,12 @@ export default function NavBar() {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-8 w-auto lg:hidden"
-                    src="../dist/assets/logus.svg"
+                    src="https://www.svgrepo.com/show/419133/arrange-graphic-design-graphic-tool.svg"
                     alt="LRD Inc."
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
-                    src="../dist/assets/logus.svg"
+                    src="https://www.svgrepo.com/show/419133/arrange-graphic-design-graphic-tool.svg"
                     alt="LRD Inc."
                   />
                 </div>
