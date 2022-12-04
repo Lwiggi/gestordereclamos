@@ -3,10 +3,12 @@ import Ticket from "./Ticket";
 
 function ListadoTickets({ tickets,setTicket, eliminarTicket }) {
   return (
+
+    
     <div className="sm:w-full lg:w-full md:h-screen overflow-y-scroll">
       {tickets && tickets.length ? (
         <>
-          <h2 className="font-black text-2xl text-center">Listado Tickets</h2>
+          <h2 className="text-2xl text-center  uppercase text-cyan-900">Listado Tickets</h2>
 
         {/*   <p className="text-xl mt-5 mb-10 text-center">
             Administra tus {""}
@@ -27,11 +29,11 @@ function ListadoTickets({ tickets,setTicket, eliminarTicket }) {
         </>
       ) : (
         <>
-          <h2 className="font-black text-2xl text-center">No hay Tickets</h2>
+          <h2 className="text-2xl text-center text-cyan-900">No hay Tickets</h2>
 
-          <p className="text-xl mt-5 mb-10 text-center">
+          <p className="text-cyan-900 text-xl mt-5 mb-10 text-center">
             Comienza generando tickets {""}
-            <span className="text-indigo-600 font-bold ">
+            <span className="text-cyan-600 font-bold ">
               y apareceran aquí
             </span>
           </p>

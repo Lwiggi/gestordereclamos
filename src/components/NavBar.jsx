@@ -16,14 +16,14 @@ function classNames(...classes) {
 
 export default function NavBar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-cyan-800">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-cyan-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -37,12 +37,12 @@ export default function NavBar() {
                   <img
                     className="block h-8 w-auto lg:hidden"
                     src="./src/logus.svg"
-                    alt="Your Company"
+                    alt="LRD Inc."
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
                     src="./src/logus.svg"
-                    alt="Your Company"
+                    alt="LRD Inc."
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
@@ -52,7 +52,7 @@ export default function NavBar() {
                         key={item.name}
                         to={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.current ? 'bg-cyan-900 text-white' : 'text-gray-300 hover:bg-cyan-700 hover:text-white',
                           'px-4 py-2 rounded-md text-md font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -64,26 +64,7 @@ export default function NavBar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-   {/*              <button
-                  type="button"
-                  className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-8 w-8" aria-hidden="true" />
-                </button> */}
-
-                {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
-                  {/* <div>
-                    <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
-                    </Menu.Button>
-                  </div> */}
+                 <Menu as="div" className="relative ml-3">
                   <Transition
                     as={Fragment}
                     enter="transition ease-out duration-100"
