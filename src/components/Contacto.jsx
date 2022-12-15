@@ -1,8 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 
 export default function Contacto() {
+
+    const navigate = useNavigate();
   return (
     <div className="flex justify-center items-center w-screen h-screen bg-cyan-100">
         
@@ -26,11 +29,11 @@ export default function Contacto() {
                     </div>
                     <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
                         <div className='w-full'></div>
-                        <div className="my-2 w-1/2 lg:w-3/4">
-                            <Link to ='/' className="bg-cyan-600 w-full p-3 text-white uppercase font-bold hover:bg-cyan-700 cursor-pointer transition-all rounded-lg">
-                            Enviar Mensaje
-                            </Link>
-                        </div>
+                         <button 
+        type="button"
+        className="py-2 px-10 bg-cyan-600 hover:bg-cyan-800 text-white font-bold uppercase rounded-lg"
+        onClick={()=> {navigate("/")}}
+        >Enviar mensaje</button>
                     </div>
                 </div>
             </div>
